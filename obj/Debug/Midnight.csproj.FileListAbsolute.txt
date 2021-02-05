@@ -11,3 +11,16 @@ C:\Users\eduar\source\repos\Midnight\obj\Debug\Midnight.exe
 C:\Users\eduar\source\repos\Midnight\obj\Debug\Midnight.pdb
 C:\Users\eduar\source\repos\Midnight\obj\Debug\Midnight.EditEForm.resources
 C:\Users\eduar\source\repos\Midnight\obj\Debug\Midnight.EditPForm.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\bin\Debug\Midnight.exe.config
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\bin\Debug\Midnight.exe
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\bin\Debug\Midnight.pdb
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.csprojAssemblyReference.cache
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.EditEForm.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.EditPForm.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.LoginForm.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.MainForm.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.Properties.Resources.resources
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.csproj.GenerateResource.cache
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.csproj.CoreCompileInputs.cache
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.exe
+C:\Users\eduar\OneDrive\Documentos\GitHub\Midnight\obj\Debug\Midnight.pdb

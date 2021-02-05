@@ -15,12 +15,12 @@ namespace Midnight
         public MainForm()
         {
             InitializeComponent();
-            
+
         }
 
         //altera opções de entrada de produtos 
         //remove a caixa de texto e apresenta uma caixa de seleção com itens pre definidos
-        //(tbpProdutos)
+        //(tbpCardapio)
         private void ckbTipoProduto_CheckedChanged(object sender, EventArgs e)
         {
             cbxTipoProduto.Visible = false;
@@ -41,7 +41,8 @@ namespace Midnight
         //(tbpEstabelecimento)
         private void cbxOpcoesE_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxOpcoesE.SelectedIndex == 1) {
+            if (cbxOpcoesE.SelectedIndex == 1)
+            {
                 Form f1 = FindForm();
                 EditEForm f2 = new EditEForm();
                 f2.Show();
@@ -51,10 +52,11 @@ namespace Midnight
 
         //altera entre adicionar e visualizar cadastro de produtos
         //chama EdidPForm
-        //(tbpProdutos)
+        //(tbpCardapio)
         private void cbxOpcoesP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxOpcoesP.SelectedIndex == 1) {
+            if (cbxOpcoesP.SelectedIndex == 1)
+            {
                 Form f1 = FindForm();
                 EditPForm f2 = new EditPForm();
                 f2.Show();
@@ -75,13 +77,13 @@ namespace Midnight
 
         //adiciona um novo registro de produto a base de dados
         //limpa as caixas de entrada
-        //(tbpProdutos)
+        //(tbpCardapio)
         private void btnAdicionar_Click(object sender, EventArgs e)
-        {            
+        {
             ckbAdicionarProdP.Visible = true;
             cbxTipoProduto.Visible = true;
             ckbSelecionarProdP.Visible = false;
-            txtTipoProduto.Visible = false; 
+            txtTipoProduto.Visible = false;
             txtTipoProduto.Text = "";
             cbxTipoProduto.Text = "";
             txtDescricaoP.Text = "";
@@ -102,7 +104,7 @@ namespace Midnight
 
         //altera a opção de entrada do tipo de produto 
         //remove a caixa de seleção e apresenta uma caixa de texto para adicionar um produto novo
-        //(tbpProduto)
+        //(tbpCardapio)
         private void ckbSelecionarProdP_CheckedChanged(object sender, EventArgs e)
         {
             cbxTipoProduto.Visible = true;
@@ -110,7 +112,7 @@ namespace Midnight
             ckbAdicionarProdP.Visible = true;
             ckbSelecionarProdP.Visible = false;
 
-        
+
         }
 
         //faz o controle da lista de itens durante a realização de uma venda
@@ -119,10 +121,10 @@ namespace Midnight
         private void btnAdicionarProdV_Click(object sender, EventArgs e)
         {
             lbxProduto.Items.Add(cbxProdutoV.SelectedItem);
-            lbxQuantidade.Items.Add(txtQuantidadeV.Text);           
+            lbxQuantidade.Items.Add(txtQuantidadeV.Text);
             int qtd = int.Parse(txtQuantidadeV.Text);
             double preco = double.Parse(txtPrecoV.Text);
-            lbxPreco.Items.Add(qtd*preco);
+            lbxPreco.Items.Add(qtd * preco);
             double subtotal = double.Parse(txtSubtotal.Text);
             subtotal += (qtd * preco);
             txtSubtotal.Text = Convert.ToString(subtotal);
@@ -137,7 +139,7 @@ namespace Midnight
         private void btnAlteraH_Click(object sender, EventArgs e)
         {
             gbxAlteraH.Visible = true;
-            gbxVizualizaH.Visible = false; 
+            gbxVizualizaH.Visible = false;
         }
 
         //atualiza as informacoes de horario de funcionamento
@@ -160,6 +162,24 @@ namespace Midnight
             txtProduto.Text = "";
             cbxProtudos.Text = "";
             txtQtdEstoque.Text = "";
+        }
+
+
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //trecho usado para separar data da hora
+            //char[] data = new char[12];
+            //Convert.ToString(DateTime.Now.Date).CopyTo(0,data,0,10);
+            //string temp = "";
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    temp += data[i];
+            //}
+            //lblDia.Text = Convert.ToString(temp);
+
+
+            lblDia.Text = Convert.ToString(DateTime.Now);
         }
     }
 }

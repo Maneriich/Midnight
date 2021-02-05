@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tbpProdutos = new System.Windows.Forms.TabPage();
+            this.tbpCardapio = new System.Windows.Forms.TabPage();
             this.cgvProdutoP = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,8 +114,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.cbxOpcoesE = new System.Windows.Forms.ComboBox();
+            this.lblDia = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tbpProdutos.SuspendLayout();
+            this.tbpCardapio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cgvProdutoP)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -132,7 +134,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tbpProdutos);
+            this.tabControl1.Controls.Add(this.tbpCardapio);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tbpEstoque);
             this.tabControl1.Controls.Add(this.tbpVenda);
@@ -144,18 +146,18 @@
             this.tabControl1.Size = new System.Drawing.Size(776, 426);
             this.tabControl1.TabIndex = 0;
             // 
-            // tbpProdutos
+            // tbpCardapio
             // 
-            this.tbpProdutos.Controls.Add(this.cgvProdutoP);
-            this.tbpProdutos.Controls.Add(this.cbxOpcoesP);
-            this.tbpProdutos.Controls.Add(this.panel1);
-            this.tbpProdutos.Location = new System.Drawing.Point(4, 25);
-            this.tbpProdutos.Name = "tbpProdutos";
-            this.tbpProdutos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpProdutos.Size = new System.Drawing.Size(768, 397);
-            this.tbpProdutos.TabIndex = 0;
-            this.tbpProdutos.Text = "PRODUTOS";
-            this.tbpProdutos.UseVisualStyleBackColor = true;
+            this.tbpCardapio.Controls.Add(this.cgvProdutoP);
+            this.tbpCardapio.Controls.Add(this.cbxOpcoesP);
+            this.tbpCardapio.Controls.Add(this.panel1);
+            this.tbpCardapio.Location = new System.Drawing.Point(4, 25);
+            this.tbpCardapio.Name = "tbpCardapio";
+            this.tbpCardapio.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCardapio.Size = new System.Drawing.Size(768, 397);
+            this.tbpCardapio.TabIndex = 0;
+            this.tbpCardapio.Text = "CARDAPIO";
+            this.tbpCardapio.UseVisualStyleBackColor = true;
             // 
             // cgvProdutoP
             // 
@@ -396,7 +398,7 @@
             // btnAtualizarE
             // 
             this.btnAtualizarE.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarE.Location = new System.Drawing.Point(590, 37);
+            this.btnAtualizarE.Location = new System.Drawing.Point(592, 37);
             this.btnAtualizarE.Name = "btnAtualizarE";
             this.btnAtualizarE.Size = new System.Drawing.Size(111, 26);
             this.btnAtualizarE.TabIndex = 3;
@@ -503,6 +505,8 @@
             // 
             // tbpVenda
             // 
+            this.tbpVenda.Controls.Add(this.label22);
+            this.tbpVenda.Controls.Add(this.lblDia);
             this.tbpVenda.Controls.Add(this.panel2);
             this.tbpVenda.Controls.Add(this.btnFinalizarV);
             this.tbpVenda.Controls.Add(this.btnAdicionarProdV);
@@ -1063,6 +1067,25 @@
             this.cbxOpcoesE.Text = "VISUALIZAR INFORMAÇÕES";
             this.cbxOpcoesE.SelectedIndexChanged += new System.EventHandler(this.cbxOpcoesE_SelectedIndexChanged);
             // 
+            // lblDia
+            // 
+            this.lblDia.AutoSize = true;
+            this.lblDia.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.Location = new System.Drawing.Point(186, 32);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(39, 17);
+            this.lblDia.TabIndex = 18;
+            this.lblDia.Text = "Data";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(186, 11);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(37, 16);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "Data";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1074,8 +1097,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MIDNIGHT";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tbpProdutos.ResumeLayout(false);
+            this.tbpCardapio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cgvProdutoP)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1104,7 +1128,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tbpProdutos;
+        private System.Windows.Forms.TabPage tbpCardapio;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ComboBox cbxOpcoesP;
         private System.Windows.Forms.TabPage tbpEstoque;
@@ -1188,6 +1212,8 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button btnAlteraH;
         private System.Windows.Forms.Button btnAtualizaH;
+        private System.Windows.Forms.Label lblDia;
+        private System.Windows.Forms.Label label22;
     }
 }
 
